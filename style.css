@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: white;
+  text-align: center;
+}
+
+.logo {
+  font-size: 2.5em;
+  margin-top: 20px;
+  color: #ff004f;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.grid-casas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.casa {
+  background-color: #1e1e1e;
+  border: 2px solid #ff004f;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
+
+.casa:hover {
+  background-color: #ff004f;
+  color: #fff;
+}
+
+#painel {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#voltar {
+  background: none;
+  color: #ff004f;
+  font-size: 1.2em;
+  border: none;
+  text-decoration: none;
+}
+
+#relogio {
+  font-size: 1em;
+  color: #ccc;
+}
+
+.icone-aviao {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #ff004f;
+}
+
+#btnPrever {
+  background-color: #ff004f;
+  color: white;
+  font-size: 1.1em;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+#btnPrever:hover {
+  background-color: #d90045;
+}
+
+#listaHistorico {
+  list-style: none;
+  padding: 0;
+}
+
+#listaHistorico li {
+  margin: 6px 0;
+  padding: 8px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.azul { background-color: #007bff; }
+.roxo { background-color: #8e44ad; }
+.rosa { background-color: #e84393; }
