@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>888bets - Previsão Aviator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="painel">
+    <div class="topo-painel">
+      <a href="index.html" class="bet-button">⬅ Voltar</a>
+      <h2>888bets</h2>
+    </div>
+    <div class="previsao">
+      <div class="icone-aviao">✈️</div>
+      <p>🔮 Prever próxima rodada</p>
+      <button id="prever">Prever Rodada</button>
+      <div id="resultadoPrevisao" class="resultado"></div>
+    </div>
+    <div class="simulacao">
+      <h3>Simular múltiplas rodadas</h3>
+      <button class="simular" data-qtd="10">Simular 10</button>
+      <button class="simular" data-qtd="50">Simular 50</button>
+      <button class="simular" data-qtd="100">Simular 100</button>
+    </div>
+    <div class="historico">
+      <h3>Últimos 10 Resultados</h3>
+      <ul id="listaHistorico"></ul>
+    </div>
+    <div class="estatisticas">
+      <h3>Estatísticas</h3>
+      🔵 Azul (1.00x a 1.99x): <span id="azulCount">0</span><br>
+      🟣 Roxo (2.00x a 9.99x): <span id="roxoCount">0</span><br>
+      🌸 Rosa Escuro (10.00x+): <span id="rosaCount">0</span>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
