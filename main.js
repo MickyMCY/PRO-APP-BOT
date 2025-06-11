@@ -1,7 +1,13 @@
 let historico = [];
 
-function abrirPrevisao() {
-  document.getElementById("painel").classList.remove("hidden");
+function abrirPrevisao(casa) {
+  const painel = document.getElementById("painel");
+  const textoCasa = document.getElementById("casaSelecionada");
+  const casasContainer = document.getElementById("casasContainer");
+
+  painel.classList.remove("hidden");
+  textoCasa.innerText = Casa selecionada: ${casa};
+  casasContainer.style.display = "none"; // Esconde os botões das casas
 }
 
 function preverRodada() {
