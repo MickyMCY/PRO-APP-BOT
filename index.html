@@ -93,15 +93,15 @@
   <h1>✈️ Previsor Aviator</h1>
   <p>Selecione a sua casa de apostas e tente prever o próximo multiplicador!</p>
 
-  <div class="casas">
-    <button onclick="abrirPrevisao()">888bets</button>
-    <button onclick="abrirPrevisao()">Premier Bet</button>
-    <button onclick="abrirPrevisao()">ElephantBet</button>
-    <button onclick="abrirPrevisao()">Betway</button>
-    <button onclick="abrirPrevisao()">Hollywood Bets</button>
-  </div>
+  <div class="casas" id="casasContainer">
+  <button onclick="abrirPrevisao('888bets')">888bets</button>
+  <button onclick="abrirPrevisao('Premier Bet')">Premier Bet</button>
+  <button onclick="abrirPrevisao('ElephantBet')">ElephantBet</button>
+  <button onclick="abrirPrevisao('Betway')">Betway</button>
+  <button onclick="abrirPrevisao('Hollywood Bets')">Hollywood Bets</button>
+</div>
 
-  <div id="painel" class="painel-aviador hidden">
+<p id="casaSelecionada" style="margin-top: 10px;"></p>
     <div class="icone-aviao">✈️</div>
     <button class="btn-prever" onclick="preverRodada()">🔮 Prever próxima rodada</button>
     <div id="resultado" class="resultado"></div>
