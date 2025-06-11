@@ -1,51 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simulador Aviator</title>
+  <title>Aviator Predictor</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Ícones (plane) – você pode trocar por SVG local se quiser 100 % offline -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <div class="container" id="home">
-    <h1>Escolha a Casa de Apostas</h1>
-    <div class="bet-buttons">
-      <button class="bet-button" data-casa="888bets">888bets</button>
-      <button class="bet-button" data-casa="Premier Bet">Premier Bet</button>
-      <button class="bet-button" data-casa="ElephantBet">ElephantBet</button>
-      <button class="bet-button" data-casa="Betway">Betway</button>
-      <button class="bet-button" data-casa="Hollywood Bets">Hollywood Bets</button>
-    </div>
-  </div>
+  <!-- Tela inicial -->
+  <main id="home">
+    <h1 class="logo">Aviator&nbsp;Predictor</h1>
+    <p class="subtitle">Escolha uma casa de aposta para ver as previsões:</p>
 
-  <div class="painel" id="painel" style="display: none;">
-    <div class="topo-painel">
-      <button id="voltar">⬅ Voltar</button>
-      <h2 id="casaSelecionada"></h2>
+    <section class="grid-casas">
+      <button class="casa" data-casa="888bets">888bets</button>
+      <button class="casa" data-casa="premier">Premier Bet</button>
+      <button class="casa" data-casa="elephant">ElephantBet</button>
+      <button class="casa" data-casa="betway">Betway</button>
+      <button class="casa" data-casa="hollywood">Hollywood Bets</button>
+    </section>
+  </main>
+
+  <!-- Painel interno (aparece quando o usuário escolher uma casa) -->
+  <section id="painel" class="hidden">
+    <header>
+      <button id="voltar" title="Voltar ao menu">&larr;</button>
+      <h2 id="nomeCasa"></h2>
+      <div id="relogio"></div>
+    </header>
+
+    <div class="icone-aviao">
+      <i class="fa-solid fa-plane-up"></i>
     </div>
-    <div class="previsao">
-      <div class="icone-aviao">✈️</div>
-      <p>🔮 Prever próxima rodada</p>
-      <button id="prever">Prever Rodada</button>
-      <div id="resultadoPrevisao" class="resultado"></div>
-    </div>
-    <div class="simulacao">
-      <h3>Simular múltiplas rodadas</h3>
-      <button class="simular" data-qtd="10">Simular 10</button>
-      <button class="simular" data-qtd="50">Simular 50</button>
-      <button class="simular" data-qtd="100">Simular 100</button>
-    </div>
-    <div class="historico">
-      <h3>Últimos 10 Resultados</h3>
-      <ul id="listaHistorico"></ul>
-    </div>
-    <div class="estatisticas">
-      <h3>Estatísticas</h3>
-      <p>🔵 Azul (1.00x a 1.99x): <span id="azulCount">0</span></p>
-      🟣 Roxo (2.00x a 9.99x): <span id="roxoCount">0</span><br />
-      🌸 Rosa Escuro (10.00x+): <span id="rosaCount">0</span>
-    </div>
-  </div>
+
+    <button id="btnPrever">✈️ &nbsp;Prever próxima rodada</button>
+
+    <h3>Histórico</h3>
+    <ul id="listaHistorico"></ul>
+  </section>
 
   <script src="main.js"></script>
 </body>
