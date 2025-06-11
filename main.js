@@ -1,15 +1,12 @@
 function gerarMultiplicador() {
   const agora = new Date();
-  const hora = agora.getUTCHours() + 2; // Fuso horário de Johannesburg (UTC+2)
+  const hora = agora.getUTCHours() + 2; // Johannesburg
   const minutos = agora.getUTCMinutes();
 
-  const minutosNoPeriodo = hora * 60 + minutos;
   const finalDeHora = minutos >= 30;
-
-  let faixa = 'azul'; // Default
+  let faixa = 'azul';
   let multi;
 
-  // Lógica de distribuição por hora e minutos
   if (finalDeHora && minutos % 10 === 0) {
     multi = (Math.random() * 10 + 10).toFixed(2); // 10x a 20x
     faixa = multi >= 10 ? 'rosa' : 'roxo';
@@ -19,13 +16,13 @@ function gerarMultiplicador() {
   } else {
     const chance = Math.random();
     if (chance < 0.7) {
-      multi = (Math.random() * 1.89 + 1).toFixed(2); // 1x a 2.89x
+      multi = (Math.random() * 1.89 + 1).toFixed(2);
       faixa = 'azul';
     } else if (chance < 0.95) {
-      multi = (Math.random() * 7 + 2).toFixed(2); // 2x a 9x
+      multi = (Math.random() * 7 + 2).toFixed(2);
       faixa = 'roxo';
     } else {
-      multi = (Math.random() * 300 + 10).toFixed(2); // 10x a 310x (raro)
+      multi = (Math.random() * 300 + 10).toFixed(2);
       faixa = 'rosa';
     }
   }
@@ -53,9 +50,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (btn && historico) {
     btn.addEventListener("click", () => {
-      const { multi, faixa } = gerarMultiplicador();
-      const item = criarItemHistorico(multi, faixa);
-      historico.prepend(item);
+      btn.disabled = true;
+      btn.textContent = "⏳ Processando...";
+
+      setTimeout(() => {
+        const { multi, faixa } = gerarMultiplicador();
+
+        // Limpa histórico anterior (deixa só 1)
+        historico.innerHTML = "";
+        const item = criarItemHistorico(multi, faixa);
+        historico.appendChild(item);
+
+        btn.disabled = false;
+        btn.textContent = "✈️ Prever próxima rodada";
+      }, 500); // 0.5 segundos de delay
     });
   }
 
