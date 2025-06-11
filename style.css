@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.container, .painel {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.bet-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.bet-button, #prever, .simular, #voltar {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #222;
+  color: #fff;
+  border: 2px solid #444;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.bet-button:hover,
+#prever:hover,
+.simular:hover,
+#voltar:hover {
+  background-color: #333;
+}
+
+.painel {
+  display: none;
+}
+
+.topo-painel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icone-aviao {
+  font-size: 50px;
+  margin: 10px 0;
+}
+
+.resultado {
+  margin-top: 15px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.resultado.azul {
+  color: #4fc3f7;
+}
+
+.resultado.roxo {
+  color: #ba68c8;
+}
+
+.resultado.rosa {
+  color: #ec407a;
+}
+
+.simulacao, .historico, .estatisticas {
+  margin-top: 30px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 5px 0;
+}
